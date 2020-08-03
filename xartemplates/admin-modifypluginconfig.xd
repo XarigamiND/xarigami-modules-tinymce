@@ -1,0 +1,67 @@
+<xar:comment> License: GPL http://www.gnu.org/copyleft/gpl.html </xar:comment>
+<div class="xar-mod-page">
+    <div class="xar-mod-head">
+        <xar:if condition="!xarRequestIsAJAX()">
+            <xar:template type="module" module="base" file="admin-menu" />
+        </xar:if>
+    </div>
+    <div class="xar-mod-body">
+        <h1>
+            <xar:mlstring>Modify XarTinyMCE Plugin Configuration: </xar:mlstring>&#160;#$plugin#
+        </h1>
+        <div class="xar-mod-content">
+            <form action="#$url#" method="post" enctype="application/x-www-form-urlencoded" >
+                <fieldset>
+                    <legend>
+                        <strong><xar:mlstring>Configuration</xar:mlstring></strong>
+                    </legend>
+                    <xar:data-input type="array" name="config" id="config" value="$config" associative_array="1" rows="0" cols="2" allowinput="2" keylabel="Option" valuelabel="Value" />
+
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        <strong><xar:mlstring>Static directory mappings</xar:mlstring></strong>
+                    </legend>
+                    <xar:data-input type="array" name="mapping" id="mapping" value="$mapping" associative_array="1" rows="0" cols="2" allowinput="2" keylabel="Value" valuelabel="Text" />
+
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        <strong><xar:mlstring>Styles</xar:mlstring></strong>
+                    </legend>
+                    <xar:data-input type="array" name="styles" id="styles" value="$style" associative_array="1" rows="0" cols="2" allowinput="2" keylabel="CSS class" valuelabel="Description" />
+
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        <strong><xar:mlstring>Image resizing, cropping and thumbnails</xar:mlstring></strong>
+                    </legend>
+                    <xar:data-input type="array" name="thumbs" id="thumbs" value="$thumbs" associative_array="0" rows="0" cols="3" allowinput="2" keylabel="" valuelabel="Parameters" />
+
+                    <p>
+                        <xar:if condition="$plugin eq 'imanager' or $plugin eq 'ibrowser'">
+                            <strong><xar:mlstring>Format: size|ext|crop</xar:mlstring></strong>
+                            <br />
+                            <xar:comment>We should not hardcode iManager help here. TODO: move this out.</xar:comment>
+                            <xar:mlstring>size: if set to * or '0', no image resizing will be done, otherwise set to desired width or height, e.g. 640.</xar:mlstring>
+                            <br />
+                            <xar:mlstring>ext: if set to * width or height will be set as identifier. If set to '', no identifier will be set.</xar:mlstring>
+                            <br />
+                            <xar:mlstring>crop: if set to true, image will be zoom cropped resulting in a square image.</xar:mlstring>
+                        <xar:else />
+                            <xar:mlstring>No feature corresponding for this plugin</xar:mlstring>
+                        </xar:if>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <xar:mlstring>To reset all the settings to default, please remove all the lines in both sections.</xar:mlstring>
+                    <div class="xar-form-footer">
+                        <input type="hidden" name="authid" id="authid" value="#$authid#" />
+
+                        <input type="submit" value="#$updatebutton#" />
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

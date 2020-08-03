@@ -1,0 +1,5 @@
+Quick notes about upgrading to upstream:
+
+- Use the repository https://github.com/tinymce/tinymce
+- Note the version number, plus the date of the last commit
+- make sure not to override pagebreak, loremipsum, spellchecker, dphighlight and maybe advcode.
