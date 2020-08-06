@@ -34,7 +34,7 @@ if (TinyMCE_Compressor::getParam("js")) {
  * still provides dynamic initialization.
  *
  * Example of direct usage:
- * require_once("../jscripts/tiny_mce/tiny_mce_gzip.php");
+ * require once("../jscripts/tiny_mce/tiny_mce_gzip.php");
  *
  * // Renders script tag with compressed scripts
  * TinyMCE_Compressor::renderTag(array(
