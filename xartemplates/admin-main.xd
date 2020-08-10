@@ -1,6 +1,5 @@
 <xar:comment> License: GPL http://www.gnu.org/copyleft/gpl.html </xar:comment>
 <xar:set name="modInfo">xarModGetInfo(xarModGetIDFromName('tinymce'))</xar:set>
-<xar:set name="xarigamiprojectlink">'<a href="http://xarigami.com/project/xartinymce" title="'.xarML('xarTinyMCE Project page at xarigami.com').'">'.xarML('xarTinyMCE project page').'</a>'</xar:set>
 <div class="xar-mod-page">
     <div class="xar-mod-head">
         <xar:if condition="!xarRequestIsAJAX()">
@@ -149,12 +148,9 @@
                         <li><xar:mlstring><strong>xhtmlextras</strong>: (xhtmlextras) Abiilty to add xml extras such as cite.</xar:mlstring></li>
                     </ol>
                     <p>
-                        <xar:ml>
-                            <xar:mlstring>Further plugins that are customized and tested for xartinymce can be downloaded from the #(1).
-                            These include IBrowser (image upload and browse), IManager (full featured image upload, browse and editing with all the features of phpthumbs, and Dictionary lookup plugin.
-                            </xar:mlstring>
-                        <xar:mlvar>#$xarigamiprojectlink#</xar:mlvar>
-                        </xar:ml>
+                        <xar:mlstring>Further plugins that are customized and tested for xartinymce can be downloaded from the</xar:mlstring>&nbsp;
+                        <a href="http://xarigami.org/project/xartinymce"><xar:mlstring>Xarigami TinyMCE project page</xar:mlstring></a>.
+                        <xar:mlstring>These include IBrowser (image upload and browse), IManager (full featured image upload, browse and editing with all the features of phpthumbs, and Dictionary lookup plugin.</xar:mlstring>
                     </p>
                 <h3>
                     <xar:mlstring>Security Access</xar:mlstring>
@@ -188,35 +184,10 @@
                 <h3>
                     <xar:mlstring>Further Information</xar:mlstring>
                 </h3>
-                <p><xar:mlstring>Further information on xarTinyMCE can be found at</xar:mlstring></p>
                 <ul>
-                    <li>
-                        <xar:ml>
-                            <xar:mlstring>The #(1). Click on main Display tab to get the latest release information.</xar:mlstring>
-                            <xar:mlvar>#$xarigamiprojectlink#</xar:mlvar>
-                        </xar:ml>
-                    </li>
-                    <li>
-                        <xar:set name="resourcelink">'<a href="http://xarigami.com/project/xartinymce?page=resources" title="'.xarML('Related resources on XarTinyMCE').'">'.xarML('Xarigami Resources for xarTinyMCE').'</a>'</xar:set>
-                        <xar:ml>
-                            <xar:mlstring>Related tutorials and documentation on xarTinyMCE found at #(1).</xar:mlstring>
-                            <xar:mlvar>#$resourcelink#</xar:mlvar>
-                        </xar:ml>
-                     </li>
-                     <li>
-                     <xar:set name="moxielinkhelp">'<a href ="http://wiki.moxiecode.com/index.php/TinyMCE:Index">'.xarML('usage instructions').'</a>'</xar:set>
-                        <xar:ml>
-                            <xar:mlstring>See the TinyMCE Project #(1) for more detail on specific TinyMCE options.</xar:mlstring>
-                            <xar:mlvar>#$moxielinkhelp#</xar:mlvar>
-                        </xar:ml>
-                    </li>
-                    <li>
-                        <xar:set name="resourcebugs">'<a href="http://xarigami.com/contrails/displayproject/xtm" title="'.xarML('XarTinyMCE issue tracker').'">'.xarML('xarTinyMCE issue tracker').'</a>'</xar:set>
-                        <xar:ml>
-                            <xar:mlstring>Please post any bugs and feature requests at #(1).</xar:mlstring>
-                            <xar:mlvar>#$resourcebugs#</xar:mlvar>
-                        </xar:ml>
-                    </li>
+                    <li><a href="http://xarigami.org/project/xartinymce"><xar:mlstring>Xarigami TinyMCE project page</xar:mlstring></a></li>
+                    <li><a href="http://xarigami.org/contrails/displayproject/xtm"><xar:mlstring>Xarigami TinyMCE issue tracker</xar:mlstring></a></li>
+                    <li><a href="https://www.tiny.cloud/docs/"><xar:mlstring>TinyMCE project documentation</xar:mlstring></a></li>
                 </ul>
                 <p class="xar-sub">
                     <xar:mlstring>
