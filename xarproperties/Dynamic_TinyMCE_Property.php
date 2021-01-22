@@ -115,8 +115,8 @@ class Dynamic_TinyMCE_Property extends  Dynamic_TextArea_Property
         if (!empty($config)) {
             $configs = xarModAPIFunc('tinymce','user','getall',array('name'=>$config));
         }
-        if (isset($config) && count($config)>0) {
-            $config = @current($configs);
+        if (isset($configs) && count($configs)>0) {
+            $config = $configs[$config];
         } else {
             //we forgot to check something - show some error
         }
